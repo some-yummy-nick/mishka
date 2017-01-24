@@ -1,3 +1,158 @@
-h1 {
-  background: rebeccapurple;
+.menu {
+  position: relative;
+  &__list {
+    @include noList;
+    text-align: center;
+  }
+  &__item {
+    display: block;
+    padding: 15px;
+    &--active {
+      .menu__link {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__link {
+    font-size: 12px;
+    font-weight: 700;
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      color: rgba(#000, 0.3);
+      text-decoration: none;
+    }
+  }
+  &__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    font-size: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #000;
+    &:hover {
+      background-color: transparent;
+    }
+    &:active {
+      background-color: rgba(#000, 0.3);
+    }
+  }
+  &--opened {
+    .menu__toggle {
+      &:hover {
+        &::before, &::after {
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+  &--closed {
+    .menu__toggle {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 17px;
+        width: 36px;
+        height: 2px;
+        background-color: #ffffff;
+        box-shadow: 0 8px 0 0 #ffffff,
+        0 16px 0 0 #ffffff;
+      }
+      &:hover {
+        &::before {
+          background-color: currentColor;
+          box-shadow: 0 8px 0 0 currentColor,
+          0 16px 0 0 currentColor;
+        }
+      }
+    }
+
+  }
+
+
+  &--closed .menu__toggle:active::before {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3),
+    0 16px 0 0 rgba(255, 255, 255, 0.3);
+  }
+  &--opened .menu__toggle {
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 36px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  @media($mobile-widths-only) {
+    &--closed .menu__item {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+    &--no-js {
+      .menu__item {
+        display: block;
+      }
+      .menu__toggle {
+
+        display: none;
+      }
+    }
+  }
+  @media ($tablet-widths) {
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__toggle {
+      display: none;
+    }
+    &__item {
+      background: transparent;
+      box-shadow: none;
+      margin-right: 20px;
+    }
+    &__link {
+      font-size: 18px;
+      font-weight: 400;
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
 }
+
+
+

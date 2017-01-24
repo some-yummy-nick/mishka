@@ -1,1 +1,4 @@
-const name = 4;
+import menu from './menu';
+import activeLink from './active-link';
+menu();
+activeLink();
