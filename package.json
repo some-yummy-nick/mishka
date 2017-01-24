@@ -1,5 +1,5 @@
 {
-  "name": "new",
+  "name": "mishka",
   "scripts": {
     "build": "set NODE_ENV=production&&npm run dest&&npm run webpack",
     "start": "parallelshell \"npm run gulp\" \"npm run webpack\"",
