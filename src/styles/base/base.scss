@@ -55,3 +55,12 @@ img{
   color: #0000AA;
   background: #ff7b93;
 }
+.container{
+  @include container;
+}
+.display-none{
+  display: none;
+  @media($tablet-widths) {
+    display: block;
+   }
+}

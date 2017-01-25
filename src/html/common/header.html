@@ -1,28 +1,55 @@
 <header class="header">
-  <nav class="menu  menu--closed menu--no-js">
+  <div class="container">
+  <div class="header__logo">
+    <a href="#">
+      <svg class="header__svg  header__svg--mobile">
+        <use xlink:href="#mishka-logo-mobile"></use>
+      </svg>
+      <svg class="header__svg  header__svg--tablet">
+        <use xlink:href="#mishka-logo-tablet"></use>
+      </svg>
+      <svg class="header__svg  header__svg--desktop">
+        <use xlink:href="#mishka-logo-desktop"></use>
+      </svg>
+    </a>
+  </div>
+  <nav class="menu  menu--closed  menu--no-js">
     <button class="menu__toggle" type="button" id="menu__toggle">Открыть меню</button>
     <ul class="menu__list">
       <li class="menu__item  menu__item--home">
-        <a class="menu__link" href="index.html">Home</a>
+        <a class="menu__link" href="index.html">Каталог товаров</a>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="">Features</a>
+        <a class="menu__link" href="#">Вязание на заказ</a>
       </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Our team</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Gallery</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Pricing</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Partners</a>
-      </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Contacts</a>
-      <li>
     </ul>
   </nav>
+    <div class="header__search  display-none">
+      <form id="search" action="">
+        <input type="text" placeholder="Поиск по сайту">
+        <button type="submit">
+          <svg>
+            <use xlink:href="#search"></use>
+          </svg>Поиск
+        </button>
+      </form>
+    </div>
+    <div class="header__basket  display-none">
+      <svg>
+        <use xlink:href="#basket"></use>
+      </svg>
+      <a href="">Корзина: <span>пока пуста</span></a>
+    </div>
+    <div class="header__free-delivery">Бесплатная доставка по России</div>
+    <div class="header__sales">
+      <ul>
+        <li>
+          <a href="#">Новые поступления</a>
+        </li>
+        <li>
+          <a href="#">Распродажи</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>

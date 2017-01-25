@@ -82,15 +82,19 @@
 @mixin placeColor($color: #000000) {
   &::-webkit-input-placeholder {
     color: $color;
+    font-weight: 700;
   }
   &:-moz-placeholder {
     color: $color;
+    font-weight: 700;
   }
   &::-moz-placeholder {
     color: $color;
+    font-weight: 700;
   }
   &:-ms-input-placeholder {
     color: $color;
+    font-weight: 700;
   }
 }
 @mixin triangle($triangle-size,$triangle-color,$triangle-direction) {
