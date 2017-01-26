@@ -12,22 +12,47 @@
     width: 280px;
     padding-top: 40px;
     margin-bottom: 40px;
+    &--eco {
+      svg {
+        width: 33px;
+        height: 38px;
+      }
+    }
+    &--love {
+      svg {
+        width: 35px;
+        height: 34px;
+      }
+    }
+    &--price {
+      svg {
+        width: 47px;
+        height: 27px;
+      }
+    }
+    &--homeland {
+      svg {
+        width: 55px;
+        height: 23px;
+      }
+    }
+    &--likes {
+      svg {
+        width: 34px;
+        height: 27px;
+      }
+    }
+    &--gift {
+      svg {
+        width: 33px;
+        height: 32px;
+      }
+    }
     p {
       width: 210px;
       font-size: 20px;
       font-weight: 700;
       margin-top: 10px;
-    }
-    &:first-child {
-      background: url('../images/icon-1.svg') no-repeat;
-    }
-    &:nth-child(2) {
-      background: url('../images/icon-2.svg') no-repeat;
-    }
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i}) {
-        background: url('../images/icon-#{$i}.svg') no-repeat;
-      }
     }
   }
   @media($tablet-widths) {
@@ -41,9 +66,6 @@
       margin-left: 0;
       margin-right: 0;
       max-width: 700px;
-    }
-    &__item {
-
     }
   }
   @media($desktop-widths) {

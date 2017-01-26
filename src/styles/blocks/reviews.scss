@@ -1,6 +1,6 @@
-.reviews{
+.reviews {
   margin-bottom: 60px;
-  .container{
+  .container {
     position: relative;
     @media($tablet-widths) {
       min-height: 457px;
@@ -8,29 +8,25 @@
       background-image: url(../images/review@1x.jpg);
       background-position: 0 0;
       background-repeat: no-repeat;
-
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-
         background-image: url(../images/review@2x.jpg);
         background-size: 350px auto;
-
       }
     }
   }
-
-
 }
-.slider{
+
+.slider {
   position: relative;
   vertical-align: top;
   width: 260px;
   margin-left: auto;
   margin-right: auto;
-  &__list-wrap{
+  &__list-wrap {
     width: 100%;
     overflow: hidden;
   }
-  &__list{
+  &__list {
     @include noList;
     @include clearfix;
     width: 9000px;
@@ -38,52 +34,49 @@
     transition: all 0.3s;
     left: 0;
   }
-  &__item{
+  &__item {
     float: left;
     width: 260px;
-    blockquote{
+    blockquote {
       margin: 0;
       padding: 0;
     }
-    p{
+    p {
       margin-bottom: 20px;
       font-size: 15px;
       line-height: 30px;
       color: #444;
 
     }
-    cite{
+    cite {
       display: block;
       font-weight: 700;
-
     }
   }
-  &__controls{
+  &__controls {
     position: relative;
     width: 150px;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
   }
-  &__controls-button{
+  &__controls-button {
     position: absolute;
     bottom: 0;
-
-    svg{
+    svg {
       width: 51px;
       height: 26px;
-      &:hover{
+      &:hover {
         opacity: 0.6;
       }
-      &:active{
+      &:active {
         opacity: 0.3;
       }
     }
-    &--next{
+    &--next {
       right: 0;
-
     }
-    &--prev{
+    &--prev {
       left: 0;
     }
   }
@@ -91,10 +84,10 @@
     width: 668px;
     margin-left: 0;
     margin-right: 0;
-    &__item{
+    &__item {
       width: 668px;
     }
-    &__controls{
+    &__controls {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -104,10 +97,10 @@
   }
   @media($desktop-widths) {
     width: 784px;
-    &__item{
+    &__item {
       width: 784px;
     }
-    &__controls{
+    &__controls {
       right: -100px;
     }
   }

@@ -1,26 +1,30 @@
-.display-none{
+.display-none {
   display: none;
   @media($tablet-widths) {
     display: block;
   }
 }
-.center{
+
+.center {
   display: block;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
+
 .title {
+  position: relative;
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 0;
-
+  z-index: 3;
   @media($tablet-widths) {
     text-align: left;
     font-size: 53px;
   }
 }
-.btn{
+
+.btn {
   display: block;
   width: 260px;
   margin-top: 20px;
@@ -30,7 +34,7 @@
   text-align: center;
   border: 2px solid #444;
   text-transform: uppercase;
-  &--reviews{
+  &--reviews {
     margin-left: auto;
     margin-right: auto;
     @media($tablet-widths) {
@@ -44,14 +48,14 @@
     }
 
   }
-@media($tablet-widths) {
-  width: 292px;
-}
-  &:hover{
+  @media($tablet-widths) {
+    width: 292px;
+  }
+  &:hover {
     background-color: #444;
     color: #fff;
   }
-  &:active{
-   color:rgba(255,255,255,0.3);
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
