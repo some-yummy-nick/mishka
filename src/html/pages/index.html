@@ -32,21 +32,44 @@
     href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
 <![endif]-->
 <div class="svg-wrapper" style="height: 0; width: 0; position: absolute; visibility: hidden">
-  @@include('../common/svg.html')
+  @@include('../blocks/svg.html')
 </div>
 <div class="wrapper">
   <div class="content">
-    @@include('../common/header.html')
-    @@include('../common/promo.html')
-    @@include('../common/products.html')
+    @@include('../blocks/header.html')
+    @@include('../blocks/promo.html')
+    @@include('../blocks/products.html')
+    @@include('../blocks/top-sale.html')
+    @@include('../blocks/about.html')
+    @@include('../blocks/reviews.html')
+    @@include('../blocks/map.html')
   </div>
-  @@include('../common/footer.html')
+  @@include('../blocks/footer.html')
 </div>
-<!-- build:js scripts/vendor.js -->
+<!-- build:js js/vendor.js -->
 <!-- bower:js -->
 <!-- endbower -->
 <script src="../../libraries/utils.js"></script>
 <!-- endbuild -->
-<script src="scripts/index.js"></script>
+
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIyBeTfl_g4iIaUTZAjFc6obT3pl4fXhA&signed_in=true&callback=initMap"></script>
+<script src="js/index.js"></script>
+<script>
+  function initMap() {
+    var myLatLng = {lat: 59.9387942, lng: 30.3208946};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: myLatLng
+    });
+    var image = 'images/map-pin.svg';
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!',
+      icon: image
+    });
+  }
+</script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 .products {
+  margin-top: -20px;
   .container {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 0;
+    padding-left: 0;
   }
   &__item {
     position: relative;
@@ -30,7 +33,7 @@
         height: 61px;
       }
       .products__link {
-        background-position-x: -18px;
+        background-position-x: 33px;
       }
     }
   }
@@ -62,6 +65,7 @@
   }
   @media($tablet-widths) {
     margin-top: -30px;
+    margin-bottom: 60px;
     &__item {
       width: 50%;
     }

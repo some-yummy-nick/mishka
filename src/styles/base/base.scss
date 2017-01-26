@@ -57,10 +57,9 @@ img{
 }
 .container{
   @include container;
-}
-.display-none{
-  display: none;
-  @media($tablet-widths) {
-    display: block;
-   }
+  @media($desktop-widths) {
+     &--padding{
+       padding-left: 175px;
+     }
+  }
 }
